@@ -1,17 +1,19 @@
 from typing import Callable
 
-class BaseCommand():
-    """Base class for commands in the interpreter"""
-    
-    def __init__(self, symbol : str, func : Callable):
-        if isinstance(symbol, str):
-            raise ValueError("")
+class BaseCommand:
+    """Base class for commands in .psy files"""
+    def __init__(self, name: str, func: Callable):
+        if not isinstance(name, str):
+            raise TypeError("name deve ser uma string")
         if not callable(func):
-            raise ValueError("")
+            raise TypeError("func deve ser chamável (callable)")
         
-        self.symbol : str = symbol
-        self.func : Callable = func
-    
+        self.name = name
+        self.func = func
+
+    def __call__(self, *args, **kwargs):
+        return self.func(*args, **kwargs)
+
     def call(self, *args, **kwargs):
-        """Execute the command with arguments and keyword arguments."""
+        """Calls the function stored in the instance"""
         return self.func(*args, **kwargs)
