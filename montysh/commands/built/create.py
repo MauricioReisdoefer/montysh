@@ -1,4 +1,4 @@
-from montysh import BaseCommand
+from ..base_command import BaseCommand
 from pathlib import Path
 
 class CreateCommand(BaseCommand):

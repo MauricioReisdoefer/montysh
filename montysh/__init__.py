@@ -1,2 +1,2 @@
 from .core import Interpreter, PsyFileReader
-from .commands import BaseCommand
+from .commands import BaseCommand, RmCommand, EchoCommand, CreateCommand, TimeCommand, TouchCommand, IfCommand, ElseCommand, LsCommand, ExitCommand, HereCommand, InputCommand

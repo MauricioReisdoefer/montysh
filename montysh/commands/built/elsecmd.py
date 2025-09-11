@@ -1,4 +1,4 @@
-from montysh import BaseCommand
+from ..base_command import BaseCommand
 
 class ElseCommand(BaseCommand):
     def __init__(self):

@@ -1,5 +1,5 @@
 from pathlib import Path
-from montysh import BaseCommand
+from ..base_command import BaseCommand
 
 class HereCommand(BaseCommand):
     def __init__(self):

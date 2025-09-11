@@ -1,4 +1,4 @@
-from montysh import BaseCommand
+from ..base_command import BaseCommand
 
 class ExitCommand(BaseCommand):
     def __init__(self):
